@@ -1,0 +1,6 @@
+MODEL_ID = "vllm-sr/d3-flash"
+MODEL_REVISION = "67e03e1bc157961c582ee7c6a35d9b15fada3dec"
+TARGET = "RBLN-CA25"
+NUM_DEVICES = 2
+TRANSFORMERS_VERSION = "5.17.0"
+FORMAT_ID = "d3-code-readout-v1"

@@ -1,0 +1,14 @@
+d3-flash-rbln
+Copyright 2026 d3-flash-rbln contributors.
+
+This project includes src/d3_rbln/vendor_d3_format.py from:
+  vLLM Semantic Router Team, vllm-sr/d3-flash
+  https://huggingface.co/vllm-sr/d3-flash/blob/67e03e1bc157961c582ee7c6a35d9b15fada3dec/d3_format.py
+  Licensed under Apache License 2.0 (see LICENSE).
+  The source is unmodified except for attribution and automated formatting.
+
+The graph boundary follows the public d3 PromptEncoder/code-readout contract:
+  https://huggingface.co/vllm-sr/d3-flash/blob/67e03e1bc157961c582ee7c6a35d9b15fada3dec/d3_runtime.py
+
+Model weights and vendor SDK binaries are NOT distributed in this repository.
+This is an independent experimental port, not a Rebellions or vLLM certification.

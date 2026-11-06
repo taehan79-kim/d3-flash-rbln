@@ -1,0 +1,6 @@
+# Install only in an isolated, vendor-compatible Python 3.12 environment.
+# PyTorch / torch-rbln / rebel-compiler are provided by the vendor SDK, not here.
+transformers==5.17.0
+accelerate>=1.10,<2
+safetensors>=0.6,<1
+huggingface-hub>=1.0,<2

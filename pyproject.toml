@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "d3-flash-rbln"
+version = "0.1.0"
+description = "Compile-first, two-device ATOM MAX feasibility harness for d3-flash text decisions"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+dependencies = [
+  "transformers==5.17.0",
+  "accelerate>=1.10,<2",
+  "safetensors>=0.6,<1",
+  "huggingface-hub>=1.0,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "ruff>=0.12"]
+
+[project.scripts]
+d3-rbln = "d3_rbln.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+d3_rbln = ["examples.jsonl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/d3_rbln/vendor_d3_format.py" = ["E501"]
